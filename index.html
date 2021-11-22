@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>THPaint</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="docs/logo.png" />
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div id="top_bar">
+			<div>
+				<p>Fichier</p>
+				<table class="deroulant">
+					<tr>
+						<td>Nouveau</td>
+						<td>Ctrl + N</td>
+					</tr>
+					<tr>
+						<td>Ouvrir</td>
+						<td>Ctrl + O</td>
+					</tr>
+					<tr>
+						<td>Enregistrer</td>
+						<td>Ctrl + S</td>
+					</tr>
+					<tr>
+						<td>Exporter</td>
+						<td>Ctrl + E</td>
+					</tr>
+				</table>
+
+				<p>Édition</p>
+				<table class="deroulant">
+					<tr id="btn_undo">
+						<td>Annuler</td>
+						<td>Ctrl + Z</td>
+					</tr>
+					<tr id="btn_redo">
+						<td>Refaire</td>
+						<td>Ctrl + Maj + Z</td>
+					</tr>
+				</table>
+
+				<p>Image</p>
+				<table class="deroulant">
+					<tr id="btn_undo">
+						<td>Redimensionner la zone de dessin</td>
+						<td>Ctrl + Maj + I</td>
+					</tr>
+					<tr id="btn_redo">
+						<td>Effacer tout</td>
+						<td>Ctrl + Maj + C</td>
+					</tr>
+				</table>
+
+				<p>Filtres</p>
+				<table class="deroulant">
+					<tr id="btn_undo">
+						<td>Il n'y en a pas... pour l'instant !</td>
+					</tr>
+				</table>
+
+				<p>Aide</p>
+				<table class="deroulant">
+					<tr>
+						<td>Aide en ligne</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>À propos</td>
+						<td>Ctrl + H</td>
+					</tr>
+				</table>
+			</div>
+
+			<div>
+				<p></p>
+			</div>
+
+			<div>
+				<p><a target="_blank" href="https://github.com/Theiremi/THPaint/"><img src="images/share.png" alt="see on"/> GitHub</a></p>
+			</div>
+		</div>
+		<div id="settings">
+			<div class="setting_color tool" id="set_fill_color">
+				<label for="btn_fill_color" class="settings_icon"><img src="images/filling.png" title="Couleur de remplissage" alt="fill_color" /></label>
+				<input type="color" name="fill_color" id="btn_fill_color" />
+			</div>
+
+			<div id="set_fill_type">
+				<input class="btn_fill_type" id="btn_border" type="radio" name="fill_type" value="border" />
+				<label class="tool" for="btn_border"><img src="images/border_square.png" alt="border" title="Bordures uniquement" /></label>
+				<input class="btn_fill_type" id="btn_filled" type="radio" name="fill_type" value="filled" />
+				<label class="tool" for="btn_filled"><img src="images/filled_square.png" alt="border" title="Remplissage uniquement" /></label>
+				<input class="btn_fill_type" id="btn_full" type="radio" name="fill_type" value="full" checked />
+				<label class="tool" for="btn_full"><img src="images/complete_square.png" alt="border" title="Bordures et remplissage" /></label>
+			</div>
+
+			<div id="set_corner_radius">
+				<label>Arrondi des coins : </label>
+				<input type="number" step="1" name="corner_radius" />
+			</div>
+
+			<div class="setting_color tool" id="set_line_color">
+				<label for="btn_line_color" class="settings_icon"><img src="images/pencil_color.png" title="Couleur de trait" alt="line_color" /></label>
+				<input type="color" name="line_color" id="btn_line_color" />
+			</div>
+
+			<div id="set_line_thickness">
+				<label>Epaisseur de trait : </label>
+				<input type="number" step="1" name="thickness" />
+			</div>
+
+			<div id="set_line_style">
+				<label>Style de trait : </label>
+				<select name="line_style">
+					<option value="square">Droite</option>
+					<option value="round">Arrondie</option>
+				</select>
+			</div>
+
+			<div class="setting_color tool" id="set_text_color">
+				<label for="btn_text_color" class="settings_icon"><img src="images/text_color.png" title="Couleur du texte" alt="text_color" /></label>
+				<input type="color" name="text_color" id="btn_text_color" />
+			</div>
+
+			<div id="set_font_size">
+				<label>Taille de police : </label>
+				<input type="number" step="1" name="font_size" />
+			</div>
+		</div>
+
+		<div id="tools">
+			<button class="tool" onclick="select()"><img src="images/cursor.png" title="Sélectionner" alt="select" /></button>
+			<button class="tool" onclick="curve()"><img src="images/pencil.png" title="Courbe" alt="curve" /></button>
+			<button class="tool" onclick="line()"><img src="images/line.png" title="Ligne" alt="line" /></button>
+			<button class="tool" onclick="rect()"><img src="images/square.png" title="Rectangle" alt="rectangle" /></button>
+			<!--<button class="tool" onclick="circle()"><img src="images/circle.png" title="Cercle" alt="circle" /></button>
+			<button class="tool" onclick="text()"><img src="images/text.png" title="Texte" alt="text" /></button>
+			<button class="tool" onclick="image()"><img src="images/gallery.png" title="Importer une image" alt="image" /></button>-->
+		</div>
+
+		<div id="work_zone">
+			<div id="paint_box">
+				<svg id="paint_zone" viewBox="0 0 100 100"></svg>
+			</div>
+
+			<div id="right_tools">
+			</div>
+		</div>
+		
+
+		</svg>
+		<div id="back_popup_start">
+			<div id="popup_start">
+				<h1 id="popup_title">Bienvenue dans THPaint</h1>
+				<button id="new_image">
+					Créer une nouvelle image
+				</button>
+				<button id="existing_image">
+					Ouvrir une image existante
+				</button>
+			</div>
+		</div>
+		
+	</body>
+
+	<script src="https://js.theireply.fr/jquery.js"></script>
+	<script src="file.js"></script>
+	<script src="script.js"></script>
+	<script src="top_bar.js"></script>
+	<script src="menues.js"></script>
+	<script src="draw.js"></script>
+</html>

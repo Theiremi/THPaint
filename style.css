@@ -1,0 +1,307 @@
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 100;
+	src: url('https://fonts.theireply.fr/akrobat/Thin.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/Thin.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/Thin.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/Thin.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 200;
+	src: url('https://fonts.theireply.fr/akrobat/ExtraLight.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraLight.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraLight.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraLight.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 300;
+	src: url('https://fonts.theireply.fr/akrobat/Light.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/Light.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/Light.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/Light.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 400;
+	src: url('https://fonts.theireply.fr/akrobat/Regular.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/Regular.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/Regular.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/Regular.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 600;
+	src: url('https://fonts.theireply.fr/akrobat/SemiBold.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/SemiBold.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/SemiBold.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/SemiBold.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 700;
+	src: url('https://fonts.theireply.fr/akrobat/Bold.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/Bold.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/Bold.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/Bold.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 800;
+	src: url('https://fonts.theireply.fr/akrobat/ExtraBold.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraBold.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraBold.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/ExtraBold.eot')
+}
+@font-face{
+	font-family: 'police_theireply';
+	font-weight: 900;
+	src: url('https://fonts.theireply.fr/akrobat/Black.eot?#iefix') format('embedded-opentype'),
+	     url('https://fonts.theireply.fr/akrobat/Black.woff') format('woff'),
+	     url('https://fonts.theireply.fr/akrobat/Black.ttf') format('truetype'),
+	     url('https://fonts.theireply.fr/akrobat/Black.eot')
+}
+
+body
+{
+	margin: 0;
+	background-color: rgb(50, 50, 50);
+	font-family: "police_theireply", "Arial", sans-serif;
+}
+
+p
+{
+	margin: 0;
+}
+
+#settings, #specific_settings, #top_bar, #top_bar > div, #tools
+{
+	display: flex;
+	align-items: center;
+	background-color: rgb(50, 50, 50);
+	color: rgb(240, 240, 240);
+}
+
+#top_bar
+{
+	justify-content: space-between;
+}
+
+#top_bar > div
+{
+
+}
+
+#top_bar > div:first-child > p
+{
+	font-size: 16px;
+	margin: 0 0 2px 0;
+	padding: 5px 10px 0 10px;
+	cursor: default;
+}
+
+#top_bar > div:last-child > p
+{
+	margin-right: 5px;
+}
+
+#top_bar > div:last-child > p > a
+{
+	text-decoration: none;
+	color: rgb(240, 240, 240);
+}
+
+#top_bar > div:last-child > p > a > img
+{
+	height: 10px;
+	vertical-align: middle;
+}
+
+.deroulant
+{
+	background: rgb(80, 80, 80);
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	margin: 0;
+	cursor: default;
+	border-collapse: collapse;
+}
+
+.deroulant tr:hover
+{
+	background-color: rgb(100, 100, 100);
+}
+
+.deroulant tr td
+{
+	font-size: 16px;
+}
+
+.deroulant tr:first-child td:first-child
+{
+	padding-top: 5px;
+}
+
+.deroulant tr td:first-child
+{
+	padding-left: 5px;
+}
+
+.deroulant tr td:last-child
+{
+	padding-right: 5px;
+}
+
+.deroulant tr:last-child td:last-child
+{
+	padding-bottom: 5px;
+}
+
+.deroulant td:first-child
+{
+	padding-right: 10px;
+}
+
+.deroulant td:last-child
+{
+	text-align: right;
+}
+
+#settings
+{
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#settings > *:not(.setting_color)
+{
+	display: none;
+	margin: 5px;
+}
+
+.setting_color
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: auto !important;
+}
+.settings_icon img, .settings_icon
+{
+	height: 30px;
+	width: 30px;
+}
+
+input[type="color"]
+{
+	margin: 5px 0 0 0;
+	padding: 0;
+	border: none;
+	background: none;
+	height: 10px;
+	width: 30px;
+}
+
+.btn_fill_type
+{
+	display: none;
+}
+
+.btn_fill_type:checked + label
+{
+	background: rgb(100, 100, 100);
+}
+
+.btn_fill_type + label
+{
+	display: block;
+}
+
+.btn_fill_type + label img
+{
+	height: 30px;
+}
+
+#set_line_thickness, #set_line_style, #set_font_size, #set_corner_radius
+{
+	flex-direction: column;
+	align-items: center;
+}
+
+#set_line_thickness input, #set_line_style input, #set_font_size input, #set_corner_radius input
+{
+	width: 100px;
+}
+
+#tools
+{
+	margin-top: 20px;
+}
+
+.tool
+{
+	border: none;
+	border-radius: 5px;
+	background: rgb(70, 70, 70);
+	margin: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.tool:hover
+{
+	background: rgb(100, 100, 100);
+}
+.tool:active
+{
+	background: rgb(70, 70, 70);
+}
+.tool > img
+{
+	height: 30px;
+	vertical-align: middle;
+}
+
+#paint_box
+{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	overflow: hidden;
+}
+
+svg
+{
+	background-color: rgb(255, 255, 255);
+	margin: auto;
+	flex-shrink: 0;
+}
+
+
+#back_popup_start
+{
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#popup_start
+{
+	background-color: rgb(240, 240, 240);
+	border-radius: 20px;
+	padding: 20px;
+}
+
+#popup_title
+{
+	margin: 0;
+}
